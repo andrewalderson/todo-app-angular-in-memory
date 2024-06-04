@@ -4,7 +4,7 @@ import {
   ENVIRONMENT_INITIALIZER,
   importProvidersFrom,
   inject,
-  provideZoneChangeDetection,
+  provideExperimentalZonelessChangeDetection
 } from "@angular/core";
 import { MatIconRegistry } from "@angular/material/icon";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
@@ -15,7 +15,7 @@ import { routes } from "./app.routes";
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
     provideAnimationsAsync(),
     {
