@@ -1,6 +1,3 @@
-import { Routes } from '@angular/router';
-import { ShellComponent } from './shell/shell.component';
+import { Routes } from "@angular/router";
 
-export const routes: Routes = [
-    { path: '', component: ShellComponent }
-];
+export const routes: Routes = [];
