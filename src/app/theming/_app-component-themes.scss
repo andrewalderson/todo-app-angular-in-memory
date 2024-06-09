@@ -1,4 +1,4 @@
-@use "../shell/logo-theme" as logo;
+@use "../core/layout/logo/logo-theme" as logo;
 
 @mixin all-component-themes($config-or-theme) {
   @include logo.theme($config-or-theme);
