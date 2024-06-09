@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'todo-root',
+  selector: "todo-root",
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <router-outlet />
-  `,
-  styles: [],
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
-export class AppComponent { }
+export class AppComponent {}
