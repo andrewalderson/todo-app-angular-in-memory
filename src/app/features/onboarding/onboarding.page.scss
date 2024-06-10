@@ -1,0 +1,14 @@
+:host {
+  --_gap: 16px;
+  // the root component needs to be a flex container for this to work
+  // we should create a mixin that will 'fill' the page without
+  // having to know we are in a flex container
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--_gap);
+  padding: var(--_gap);
+}
