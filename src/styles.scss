@@ -17,6 +17,7 @@ $todo-theme: mat.define-theme(
       primary: mat.$azure-palette,
       tertiary: mat.$blue-palette,
     ),
+    typography: (),
     density: (
       scale: 0,
     ),
