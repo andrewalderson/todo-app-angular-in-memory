@@ -1,0 +1,9 @@
+<div class="todo-illustrated-message-illustration">
+  <ng-content select="svg"></ng-content>
+</div>
+<div class="todo-illustrated-message-title">{{ title() }}</div>
+@if (description()) {
+<div class="todo-illustrated-message-description">
+  {{ description() }}
+</div>
+}

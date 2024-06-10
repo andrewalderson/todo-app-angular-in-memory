@@ -1,0 +1,48 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+svg[viewBox] {
+  width: 100%;
+}
+
+.todo-illustrated-message-illustration {
+  color: var(--todo-illustrated-message-illustration-color);
+  /* Safari 16.3 🐛🛠️: Repeated stroke/fill properties is a workaround for a currentcolor bug that was fixed in 16.4. */
+  fill: currentColor;
+  stroke: currentColor;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.todo-illustrated-message-title {
+  margin-block-start: var(
+    --todo-illustrated-message-illustration-to-title-gap,
+    24px
+  );
+  margin-block-end: 0;
+  max-width: var(--todo-illustrated-message-title-max-inline-size, 500px);
+  font-family: var(--todo-illustrated-message-title-font-family);
+  font-size: var(--todo-illustrated-message-title-font-size);
+  font-weight: var(--todo-illustrated-message-title-font-weight);
+  line-height: var(--todo-illustrated-message-title-line-height);
+  color: var(--todo-illustrated-message-title-color);
+}
+
+.todo-illustrated-message-description {
+  margin-block-start: var(
+    --todo-illustrated-message-title-to-description-gap,
+    8px
+  );
+  margin-block-end: 0;
+  max-width: var(--todo-illustrated-message-description-max-inline-size, 500px);
+  font-family: var(--todo-illustrated-message-description-font-family);
+  font-size: var(--todo-illustrated-message-description-font-size);
+  font-weight: var(--todo-illustrated-message-description-font-weight);
+  line-height: var(--todo-illustrated-message-description-line-height);
+  color: var(--todo-illustrated-message-description-color);
+}
