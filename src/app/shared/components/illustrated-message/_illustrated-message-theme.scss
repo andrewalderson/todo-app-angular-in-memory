@@ -22,7 +22,11 @@
 
 @mixin typography($theme) {
   :root {
-    --todo-illustrated-message-title-font-family: inherit;
+    --todo-illustrated-message-title-font-family: #{mat.get-theme-typography(
+        $theme,
+        headline-medium,
+        font-family
+      )};
 
     --todo-illustrated-message-title-font-size: #{mat.get-theme-typography(
         $theme,
@@ -41,7 +45,11 @@
         line-height
       )};
 
-    --todo-illustrated-message-description-font-family: inherit;
+    --todo-illustrated-message-description-font-family: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-family
+      )};
 
     --todo-illustrated-message-description-font-size: #{mat.get-theme-typography(
         $theme,
