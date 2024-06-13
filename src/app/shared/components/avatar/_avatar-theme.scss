@@ -1,0 +1,34 @@
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  :root {
+    --todo-avatar-color: #{mat.get-theme-color($theme, outline)};
+    --todo-avatar-background-color: #{mat.get-theme-color(
+        $theme,
+        surface-container-high
+      )};
+    --todo-avatar-border-color: #{mat.get-theme-color($theme, outline)};
+  }
+}
+
+@mixin typography($theme) {
+  :root {
+    --todo-avatar-font-family: #{mat.get-theme-typography(
+        $theme,
+        body-medium,
+        font-family
+      )};
+    --todo-avatar-font-size: 45cqw;
+    --todo-avatar-font-weight: 300;
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}
