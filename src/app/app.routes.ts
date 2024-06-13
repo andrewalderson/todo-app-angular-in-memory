@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: "tasks",
     canActivate: [MUST_BE_AUTHENTICATED_TO_ACTIVATE],
-    loadComponent: async () =>
-      (await import("./features/tasks/tasks.page")).TasksPage,
+    loadChildren: async () =>
+      (await import("./features/tasks/tasks.routes")).routes,
   },
 ];
