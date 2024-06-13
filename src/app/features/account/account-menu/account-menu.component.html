@@ -1,0 +1,33 @@
+<button type="button" [matMenuTriggerFor]="userAccountMenu">
+  <span class="cdk-visually-hidden"
+    >Account Menu for {{ accountService.displayName() }}</span
+  >
+  <ng-container *ngTemplateOutlet="avatar; context: accountService" />
+</button>
+<mat-menu #userAccountMenu>
+  <todo-user-persona
+    aria-hidden="true"
+    [primaryText]="accountService.displayName()"
+    [secondaryText]="accountService.username()"
+  >
+    <ng-container
+      *ngTemplateOutlet="avatar; context: accountService"
+      todoUserPersonaAvatar
+    />
+  </todo-user-persona>
+  <mat-divider />
+  <button type="button" mat-menu-item (click)="authenticationService.logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Signout</span>
+  </button>
+</mat-menu>
+
+<ng-template #avatar let-displayName="displayName" let-username="username">
+  <todo-avatar>
+    <todo-avatar-initials-fallback
+      todoAvatarDynamicColors
+      [initialsName]="displayName()"
+      [colorsName]="username()"
+    />
+  </todo-avatar>
+</ng-template>

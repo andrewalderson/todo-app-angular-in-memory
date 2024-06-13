@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+button[aria-haspopup="menu"] {
+  all: unset;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  todo-avatar {
+    --todo-avatar-size: 36px;
+  }
+}
+
+todo-user-persona {
+  padding: 12px;
+}
