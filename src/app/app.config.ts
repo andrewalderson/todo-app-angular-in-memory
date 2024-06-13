@@ -4,7 +4,7 @@ import {
   ENVIRONMENT_INITIALIZER,
   importProvidersFrom,
   inject,
-  provideExperimentalZonelessChangeDetection
+  provideExperimentalZonelessChangeDetection,
 } from "@angular/core";
 import { MatIconRegistry } from "@angular/material/icon";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
@@ -27,6 +27,10 @@ export const appConfig: ApplicationConfig = {
       multi: true,
     },
     provideHttpClient(),
-    importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(TodoInMemoryDbService))
+    importProvidersFrom(
+      HttpClientInMemoryWebApiModule.forRoot(TodoInMemoryDbService, {
+        apiBase: "",
+      })
+    ),
   ],
 };
