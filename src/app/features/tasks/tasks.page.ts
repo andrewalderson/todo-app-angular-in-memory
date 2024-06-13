@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { MatSidenavContainer } from "@angular/material/sidenav";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'todo-tasks',
+  selector: "todo-tasks",
   standalone: true,
-  imports: [],
-  templateUrl: './tasks.page.html',
-  styleUrl: './tasks.page.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [MatSidenavContainer, RouterOutlet],
+  templateUrl: "./tasks.page.html",
+  styleUrl: "./tasks.page.scss",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TasksPage {
-
-}
+export class TasksPage {}
