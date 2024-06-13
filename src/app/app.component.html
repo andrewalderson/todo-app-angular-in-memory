@@ -1,2 +1,9 @@
-<mat-toolbar role="banner"><todo-logo /></mat-toolbar>
+<mat-toolbar role="banner">
+  <todo-logo />
+  <div class="app-toolbar-content-right">
+    @if(authenticationService.isAuthenticated()) {
+    <todo-account-menu />
+    }
+  </div>
+</mat-toolbar>
 <router-outlet />
