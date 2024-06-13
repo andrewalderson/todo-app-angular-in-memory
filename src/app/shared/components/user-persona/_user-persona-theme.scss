@@ -1,0 +1,56 @@
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  :root {
+    --todo-user-persona-heading-color: #{mat.get-theme-color($theme, on-surface)};
+    --todo-user-persona-description-color: #{mat.get-theme-color(
+        $theme,
+        on-surface
+      )};
+  }
+}
+
+@mixin typography($theme) {
+  :root {
+    --todo-user-persona-heading-font-family: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-family
+      )};
+    --todo-user-persona-heading-font-size: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-size
+      )};
+    --todo-user-persona-heading-font-weight: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-weight
+      )};
+    --todo-user-persona-description-font-family: #{mat.get-theme-typography(
+        $theme,
+        body-medium,
+        font-family
+      )};
+    --todo-user-persona-description-font-size: #{mat.get-theme-typography(
+        $theme,
+        body-medium,
+        font-size
+      )};
+    --todo-user-persona-description-font-weight: #{mat.get-theme-typography(
+        $theme,
+        body-medium,
+        font-weight
+      )};
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}
