@@ -3,6 +3,7 @@ import {
   ParsedRequestUrl,
   RequestInfoUtilities,
 } from "angular-in-memory-web-api";
+import { TaskList } from "./tasks/tasks.client";
 import { User } from "./user/user.client";
 
 export class TodoInMemoryDbService implements InMemoryDbService {
@@ -11,8 +12,12 @@ export class TodoInMemoryDbService implements InMemoryDbService {
       displayName: "John Doe",
       userPrincipalName: "john.doe@mailinator.com",
     };
+    const tasks: TaskList = {
+      value: [{ id: "1", title: "This is a test task" }],
+    };
     return {
       user,
+      tasks,
     };
   }
 
