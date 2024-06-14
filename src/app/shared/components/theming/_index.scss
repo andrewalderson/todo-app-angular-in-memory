@@ -3,6 +3,8 @@
 @forward "../illustrated-message/illustrated-message-theme" as
     illustrated-message-* show illustrated-message-theme,
   illustrated-message-color, illustrated-message-typography;
+@forward "../page-title/page-title-theme" as page-title-* show page-title-theme,
+  page-title-color, page-title-typography;
 @forward "../user-persona/user-persona-theme" as user-persona-* show user-persona-theme,
   user-persona-color, user-persona-typography;
 
