@@ -8,4 +8,4 @@
 @forward "../user-persona/user-persona-theme" as user-persona-* show user-persona-theme,
   user-persona-color, user-persona-typography;
 
-@forward "./shared-component-themes";
+@forward "./shared-component-themes" show all-component-themes;

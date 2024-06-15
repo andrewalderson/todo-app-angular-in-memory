@@ -1,1 +1,2 @@
-@forward "./app-component-themes";
+@forward "./app-component-themes" show all-component-themes;
+@forward "../shared/components/theming" hide all-component-themes;
