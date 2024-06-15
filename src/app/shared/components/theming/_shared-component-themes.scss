@@ -3,9 +3,9 @@
 @use "../page-title/page-title-theme" as page-title;
 @use "../user-persona/user-persona-theme" as user-persona;
 
-@mixin all-component-themes($config-or-theme) {
-  @include avatar.theme($config-or-theme);
-  @include illustrated-message.theme($config-or-theme);
-  @include page-title.theme($config-or-theme);
-  @include user-persona.theme($config-or-theme);
+@mixin all-component-themes($theme) {
+  @include avatar.theme($theme);
+  @include illustrated-message.theme($theme);
+  @include page-title.theme($theme);
+  @include user-persona.theme($theme);
 }

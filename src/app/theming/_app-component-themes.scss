@@ -1,7 +1,7 @@
 @use "../core/layout/logo/logo-theme" as logo;
 @use "../shared/components/theming" as shared;
 
-@mixin all-component-themes($config-or-theme) {
-  @include logo.theme($config-or-theme);
-  @include shared.all-component-themes($config-or-theme);
+@mixin all-component-themes($theme) {
+  @include logo.theme($theme);
+  @include shared.all-component-themes($theme);
 }
