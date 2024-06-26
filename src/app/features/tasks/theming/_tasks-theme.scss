@@ -1,0 +1,5 @@
+@use "../features/task-list/theming" as task-list;
+
+@mixin all-component-themes($theme) {
+  @include task-list.all-component-themes($theme);
+}

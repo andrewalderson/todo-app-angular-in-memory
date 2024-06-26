@@ -1,0 +1,5 @@
+@forward "../components/task-list-item/task-list-item-theme" as task-list-item-*
+    show task-list-item-theme,
+  task-list-item-color, task-list-item-typography;
+
+@forward "./task-list-component-themes" show all-component-themes;
