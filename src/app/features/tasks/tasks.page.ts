@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { MatSidenavContainer } from "@angular/material/sidenav";
+import { MatToolbar } from "@angular/material/toolbar";
+import { PageTitleComponent } from "../../shared/components/page-title/page-title.component";
 import { TaskListComponent } from "./features/task-list/task-list.component";
 
 @Component({
@@ -7,6 +9,8 @@ import { TaskListComponent } from "./features/task-list/task-list.component";
   standalone: true,
   imports: [
     MatSidenavContainer,
+    MatToolbar,
+    PageTitleComponent,
     TaskListComponent,
   ],
   templateUrl: "./tasks.page.html",
