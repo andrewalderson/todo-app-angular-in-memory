@@ -1,1 +1,3 @@
-<p>task-list works!</p>
+@for(task of taskListStore.tasks(); track task.id) {
+<todo-task-list-item [task]="task" />
+}
