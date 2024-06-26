@@ -1,0 +1,55 @@
+@use "@angular/material" as mat;
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+// revisit this to see if some of these properties should be configurabe with css custom properties
+// we need to also look at how configursble thsi component should be - variants: plain and outlined like material card
+.todo-task-list-item-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 0 16px;
+  background-color: var(--todo-task-list-item-container-background-color);
+  border-radius: 8px; // should this be a theme variable - shape ?
+  word-wrap: break-word;
+  word-break: break-word;
+  flex-wrap: wrap;
+  // look into making this a theme variable - look t elevations in marterial librayr theme files
+  @include mat.elevation(2);
+}
+
+button {
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+}
+
+.todo-task-list-item-title-wrapper {
+  position: relative;
+  flex: 1 1 0px;
+  padding: 8px 12px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 2rem;
+}
+
+.todo-task-list-item-title {
+  // use utilities from material (or create our own) to define 'slots' for these
+  color: var(--todo-task-list-item-title-text-color);
+  font-family: var(--todo-task-list-item-title-text-font-family);
+  font-size: var(--todo-task-list-item-title-text-font-size);
+  font-weight: var(--todo-task-list-item-title-text-font-weight);
+  letter-spacing: var(--todo-task-list-item-title-text-letter-spacing);
+  line-height: var(--todo-task-list-item-title-text-line-height);
+}

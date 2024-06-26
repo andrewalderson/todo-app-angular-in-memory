@@ -1,0 +1,54 @@
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  :root {
+    --todo-task-list-item-container-background-color: #{mat.get-theme-color(
+        $theme,
+        surface-container-lowest
+      )};
+    --todo-task-list-item-title-text-color: #{mat.get-theme-color(
+        $theme,
+        on-surface
+      )};
+  }
+}
+
+@mixin typography($theme) {
+  :root {
+    --todo-task-list-item-title-text-font-family: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-family
+      )};
+    --todo-task-list-item-title-text-font-size: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-size
+      )};
+    --todo-task-list-item-title-text-font-weight: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        font-weight
+      )};
+    --todo-task-list-item-title-text-letter-spacing: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        letter-spacing
+      )};
+    --todo-task-list-item-title-text-line-height: #{mat.get-theme-typography(
+        $theme,
+        body-large,
+        line-height
+      )};
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}
