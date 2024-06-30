@@ -4,8 +4,8 @@ import {
   HostBinding,
   inject,
 } from "@angular/core";
+import { TasksStore } from "../../services/tasks.store";
 import { TaskListItemComponent } from "./components/task-list-item/task-list-item.component";
-import { TaskListStore } from "./services/task-list.store";
 
 @Component({
   selector: "todo-task-list",
@@ -18,5 +18,5 @@ import { TaskListStore } from "./services/task-list.store";
 export class TaskListComponent {
   @HostBinding("role") role = "list";
 
-  protected readonly taskListStore = inject(TaskListStore);
+  protected readonly tasksStore = inject(TasksStore);
 }
