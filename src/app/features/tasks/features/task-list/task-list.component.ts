@@ -5,7 +5,7 @@ import {
   inject,
 } from "@angular/core";
 import { TasksStore } from "../../services/tasks.store";
-import { TaskListItemComponent } from "./components/task-list-item/task-list-item.component";
+import { TaskListItemComponent } from "./task-list-item.component";
 
 @Component({
   selector: "todo-task-list",
