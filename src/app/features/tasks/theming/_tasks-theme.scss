@@ -1,5 +1,5 @@
-@use "../features/task-list/task-list-item-theme" as task-list-item;
+@use "../features/task-list/task-list-theme" as task-list;
 
 @mixin all-component-themes($theme) {
-  @include task-list-item.theme($theme);
+  @include task-list.theme($theme);
 }
