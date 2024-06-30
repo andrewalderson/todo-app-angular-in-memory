@@ -3,6 +3,6 @@
     <mat-toolbar role="none">
       <todo-page-title title="Tasks" level="1" />
     </mat-toolbar>
-    <todo-task-list />
+    <todo-task-list [tasks]="tasksStore.tasks()" />
   </main>
 </mat-sidenav-container>

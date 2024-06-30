@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { MatSidenavContainer } from "@angular/material/sidenav";
 import { MatToolbar } from "@angular/material/toolbar";
 import { PageTitleComponent } from "../../shared/components/page-title/page-title.component";
 import { TaskListComponent } from "./components/task-list/task-list.component";
+import { TasksStore } from "./services/tasks.store";
 
 @Component({
   selector: "todo-tasks",
@@ -17,4 +18,6 @@ import { TaskListComponent } from "./components/task-list/task-list.component";
   styleUrl: "./tasks.page.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TasksPage {}
+export class TasksPage {
+  protected readonly tasksStore = inject(TasksStore);
+}

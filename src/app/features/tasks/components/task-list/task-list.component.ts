@@ -2,9 +2,9 @@ import {
   ChangeDetectionStrategy,
   Component,
   HostBinding,
-  inject,
+  input,
 } from "@angular/core";
-import { TasksStore } from "../../services/tasks.store";
+import { Task } from "../../../../api/tasks/tasks.client";
 import { TaskListItemComponent } from "./task-list-item.component";
 
 @Component({
@@ -18,5 +18,5 @@ import { TaskListItemComponent } from "./task-list-item.component";
 export class TaskListComponent {
   @HostBinding("role") role = "list";
 
-  protected readonly tasksStore = inject(TasksStore);
+  tasks = input.required<Task[]>();
 }
