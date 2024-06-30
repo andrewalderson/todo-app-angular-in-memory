@@ -4,7 +4,7 @@ import {
   HostBinding,
   input,
 } from "@angular/core";
-import { Task } from "../../../../api/tasks/tasks.client";
+import { Task } from "../../services/tasks.store";
 
 @Component({
   selector: "todo-task-list-item",
